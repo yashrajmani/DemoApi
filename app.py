@@ -87,5 +87,26 @@ def get_time():
 
     return jsonify(time_data)
 
+
+
+@app.route('/name', methods=['GET'])
+def get_name():
+    name_data = {
+        "names": [
+            {
+                "name": "Yash",
+            },
+                {
+                "name": "Raj",
+            },    {
+                "name": "Mani",
+            },    {
+                "name": "VIT",
+            }
+        ]
+    }
+
+    return jsonify(name_data)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
